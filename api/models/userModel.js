@@ -20,32 +20,7 @@ var UserSchema = new mongoose.Schema({
       default: "None",
       required: true
     },
-    name: String,
-    admin: {
-      type: Boolean,
-      required: true,
-      default: false
-    },
-    alert_vib: {
-      type: Number,
-      required: true,
-      default: 12
-    },
-    alert_light: {
-      type: Number,
-      required: true,
-      default: 12
-    },
-    alert_temp: {
-      type: Number,
-      required: true,
-      default: 12
-    },
-    alert_hum: {
-      type: Number,
-      required: true,
-      default: 12
-    }
+    name: String
   });
 
 //hashing a password before saving it to the database
