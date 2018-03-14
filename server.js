@@ -12,7 +12,7 @@ app.set('superSecret', sec);
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect(config.database); 
+mongoose.connect(db); 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
