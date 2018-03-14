@@ -2,6 +2,7 @@
   "name": "ThinkMe",
   "version": "0.0.1",
   "dependencies": {
+    "apn": "^2.2.0",
     "bcrypt": "^1.0.3",
     "circular-json": "^0.5.1",
     "cors": "^2.8.4",

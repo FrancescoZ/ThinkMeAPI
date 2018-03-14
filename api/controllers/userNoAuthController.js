@@ -14,11 +14,12 @@ exports.create_user = function(req, res, next) {
     if (req.body.email &&
       req.body.password &&
       req.body.name &&
-      req.body.passwordConf) {
+      req.body.passwordConf ) {
       var userData = {
         email: req.body.email,
         name: req.body.name,
-        password: req.body.password
+        password: req.body.password,
+        //deviceNotificationToken: req.body.deviceToken
       }
       //use schema.create to insert data into the db
       User.create(userData, function (err, user) {
@@ -37,11 +38,13 @@ exports.create_user_facebook = function(req, res, next) {
     // confirm that user typed same password twice
     if (req.body.email &&
       req.body.facebook &&
-      req.body.name ) {
+      req.body.name &&
+      req.body.deviceToken) {
       var userData = {
         email: req.body.email,
         name: req.body.name,
-        facebookToken: req.body.facebookToken
+        facebookToken: req.body.facebookToken,
+        deviceNotificationToken: req.body.deviceToken
       }
       //use schema.create to insert data into the db
       User.create(userData, function (err, user) {

@@ -8,7 +8,8 @@ var UserSchema = new mongoose.Schema({
       type: String,
       unique: true,
       required: true,
-      trim: true
+      trim: true,
+      index: true
     },
     password: {
       type: String,
@@ -20,7 +21,17 @@ var UserSchema = new mongoose.Schema({
       default: "None",
       required: true
     },
-    name: String
+    name: String,
+    userPaired: {
+      type: Schema.Types.ObjectId,
+      ref: 'Users',
+      required: false
+    },
+    validPair: {
+     type: Boolean,
+     default: false
+    },
+    deviceNotificationToken: String
   });
 
 //hashing a password before saving it to the database

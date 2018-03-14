@@ -4,9 +4,11 @@ var express = require('express'),
   mongoose = require('mongoose'),
   model= require('./api/models/models.js'),
   config = require('./config'),
+  sec = process.env.SECRET || config.secret,
+  db = process.env.MONGODB_URI || config.database,
   bodyParser = require('body-parser');
   
-app.set('superSecret', config.secret);
+app.set('superSecret', sec);
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
