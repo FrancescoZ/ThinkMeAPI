@@ -3,6 +3,7 @@ var express = require('express'),
   port = process.env.PORT || 4000,
   mongoose = require('mongoose'),
   model= require('./api/models/models.js'),
+  config = require('./config'),
   sec = process.env.SECRET || config.secret,
   db = process.env.MONGODB_URI || config.database,
   bodyParser = require('body-parser');

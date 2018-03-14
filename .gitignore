@@ -1,5 +1,5 @@
 #configuration
-config.js
+#config.js
 *.code-workspace
 # Logs
 logs
