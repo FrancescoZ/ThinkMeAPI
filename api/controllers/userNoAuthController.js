@@ -5,6 +5,9 @@ var mongoose = require('mongoose'),
   config = require('../../config'),
   jwt = require('jsonwebtoken');
 
+exports.workin = function(req,res, next){
+  res.json("Working");
+}
 
 exports.create_user = function(req, res, next) {
     // confirm that user typed same password twice
