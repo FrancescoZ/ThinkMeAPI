@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
   config = require('../../config'),
   jwt = require('jsonwebtoken');
 
-exports.workin = function(req,res, next){
+exports.working = function(req,res, next){
   res.json("Working");
 }
 
