@@ -11,6 +11,8 @@ module.exports = function(app) {
     .post(user.authenticate_user);
   app.route('/authenticatefacebook')
     .post(user.authenticate_user_facebook)
+
+  app.route('/').post(user.working);
 }
 
 
